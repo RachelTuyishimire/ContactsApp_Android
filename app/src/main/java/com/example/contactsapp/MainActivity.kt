@@ -2,31 +2,34 @@ package com.example.contactsapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.contactsapp.databinding.ActivityMainBinding
 import layout.ContactsData
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        class MainActivity : AppCompatActivity() {
+    }
 
-            override fun onCreate(savedInstanceState: Bundle?) {
-                super.onCreate(savedInstanceState)
-                setContentView(R.layout.activity_main)
+    override fun onResume() {
+        super.onResume()
+        displayContact()
+    }
 
-                val contactList = listOf(
-                    ContactsData("John Doe", "555-1234", "johndoe@example.com", R.drawable.placeholder_image),
-                    ContactsData("Jane Smith", "555-5678", "janesmith@example.com", R.drawable.placeholder_image),
-                    ContactsData("Bob Johnson", "555-9012", "bobjohnson@example.com", R.drawable.placeholder_image)
-                )
+    fun displayContact() {
 
-                val recyclerView = findViewById<RecyclerView>(R.id.contact_list)
-                recyclerView.layoutManager = LinearLayoutManager(this)
-                recyclerView.adapter = ContactAdapter(contactList)
-            }
-        }
+        val contact1 = ContactsData("John Doe", "Rebecca", "078798645", "rebecca@gmail.com")
+        val contact2 = ContactsData("Jane Smith", "Bridget", "23498732", "bridget@gmail.com")
+        val contact3 = ContactsData("Bob Johnson", "Milcah", "982734716", "milcah@gmail.com")
 
-        )
+        val contactList = listOf(contact1, contact2, contact3)
+        val contAdapter = ContactAdapter(contactList)
+        binding.rvContacts.layoutManager = LinearLayoutManager(this)
+        binding.rvContacts.adapter = contAdapter
     }
 }
+
