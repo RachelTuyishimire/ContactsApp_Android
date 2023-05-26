@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.contactsapp.databinding.ActivityMainBinding
-import layout.ContactsData
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
