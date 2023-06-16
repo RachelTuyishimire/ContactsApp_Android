@@ -12,17 +12,12 @@
         android:layout_width="269dp"
         android:layout_height="67dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="172dp"
         android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etName"
-            android:layout_width="300dp"
-            android:layout_height="77dp"
-            android:hint="hint" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -40,7 +35,7 @@
             android:id="@+id/etPhone"
             android:layout_width="300dp"
             android:layout_height="77dp"
-            android:hint="hint" />
+            android:hint="Phone" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -61,7 +56,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="36dp"
             android:layout_marginEnd="16dp"
-            android:hint="hint" />
+            android:hint="Email" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -82,14 +77,25 @@
         android:layout_width="155dp"
         android:layout_height="66dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="50dp"
         android:text="New Contact"
 
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etName"
+        android:layout_width="300dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="44dp"
+        android:hint="hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
